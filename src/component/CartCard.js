@@ -1,12 +1,13 @@
 import React from 'react'
 
-const CartCard = () => {
+const CartCard = (props) => {
+  const {product} = props;
   return (
     <div className='cart-card-container'>
-      <img src='https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg' alt=''></img>
+      <img src={product.imageURL} alt=''></img>
       <div className='cart-card-details'>
-        <h4>Blck Widow</h4>
-        <p>Rs. 500 </p>
+        <h4>{product.name}</h4>
+        <p>Rs. {product.price}</p>
       </div>
       <div>
       <select name="quantity" className="cart-card-select">
@@ -16,7 +17,7 @@ const CartCard = () => {
         <option value={4}>Qty 4</option>
       </select>
       </div>
-      <button className='cart-card-btn'>Delete</button>
+      <button className='cart-card-btn' >Delete</button>
     </div>
   )
 }

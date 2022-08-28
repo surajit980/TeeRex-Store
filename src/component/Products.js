@@ -5,12 +5,11 @@ export default class Products extends Component {
   render() {
     return (
       <div className='products-container'>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
+        {
+          this.props.products.map((product)=>{
+            return <ProductCard product={product} key={product.id} addtocart={this.props.addtocart}/>
+          })
+        }
       </div>
     )
   }

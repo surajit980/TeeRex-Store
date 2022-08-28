@@ -133,6 +133,7 @@ code {
 .card-bottom button{
   outline: none;
   border: none;
+  cursor: pointer;
   padding: 10px 20px;
   background-color: #4B4B4B;
   color: white;

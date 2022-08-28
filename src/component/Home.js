@@ -13,7 +13,7 @@ export default class Home extends Component {
       
       <div className='home'>
         <FilterList/>
-        <Products/>
+        <Products products={this.props.products} addtocart={this.props.addtocart}/>
       </div>
       </>
     )

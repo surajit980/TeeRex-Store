@@ -1,14 +1,15 @@
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+  const {product} =props;
   return (
     <div className='product-card'>
       <div className='card-img'>
-        <img src='https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg' alt=''></img>
+        <img src={product.imageURL} alt=''></img>
       </div>
       <div className='card-bottom'>
-        <p>Rs. 500</p>
-        <button>Add to cart</button>
+        <p>Rs. {product.price}</p>
+        <button onClick={()=>props.addtocart(props.product)}>Add to cart</button>
       </div>
     </div>
   )

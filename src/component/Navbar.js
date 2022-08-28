@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className='navbar'>
         <div className='nav-left'>
@@ -11,7 +11,7 @@ const Navbar = () => {
             <button><Link to='/' style={{ textDecoration: 'none',color:"white" }}>Products</Link></button>
             <div className='cart-logo'>
             <Link to='/carts'> <i className="fa-solid fa-cart-shopping"></i></Link>
-            <span>99</span>
+            <span>{props.cartCount}</span>
             </div>
             
         </div>
